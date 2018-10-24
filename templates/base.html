@@ -1,0 +1,372 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Sistema APEAM</title>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Sistema de registro de Productores APEAM">
+		<meta name="author" content="Soypina">
+		<!-- Favicon icon -->
+		<link rel="icon" type="image/png" href="{% static "assets/images/logo.png" %}">
+		<!-- Google font-->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+		<!-- Required Fremwork -->
+		<link rel="stylesheet" type="text/css" href="{% static "bower_components/bootstrap/css/bootstrap.min.css" %}">
+		<!-- waves.css -->
+		<link rel="stylesheet" type="text/css" href="{% static "assets/pages/waves/css/waves.min.css" %}" media="all">
+		<!-- feather icon -->
+		<link rel="stylesheet" type="text/css" href="{% static "assets/icon/feather/css/feather.css" %}">
+		<!-- sweet alert framework -->
+        <link rel="stylesheet" type="text/css" href="{% static "bower_components/sweetalert/css/sweetalert.css" %}">
+		<!-- themify-icons line icon -->
+	    <link rel="stylesheet" type="text/css" href="{% static "assets/icon/themify-icons/themify-icons.css" %}">
+	    <!-- ico font -->
+	    <link rel="stylesheet" type="text/css" href="{% static "assets/icon/icofont/css/icofont.css" %}">
+	    <!-- Font Awesome -->
+	    <link rel="stylesheet" type="text/css" href="{% static "assets/icon/font-awesome/css/font-awesome.min.css" %}">
+		<!-- Date-time picker css -->
+		<link rel="stylesheet" type="text/css" href="{% static "assets/pages/advance-elements/css/bootstrap-datetimepicker.css" %}">
+		<!-- Date-range picker css  -->
+		<link rel="stylesheet" type="text/css" href="{% static "bower_components/bootstrap-daterangepicker/css/daterangepicker.css" %}">
+		<!-- Date-Dropper css -->
+		<link rel="stylesheet" type="text/css" href="{% static "bower_components/datedropper/css/datedropper.css" %}">
+		<!-- Color Picker css -->
+		<link rel="stylesheet" type="text/css" href="{% static "bower_components/spectrum/css/spectrum.css" %}">
+		<!-- Mini-color css -->
+		<link rel="stylesheet" type="text/css" href="{% static "bower_components/jquery-minicolors/css/jquery.minicolors.css" %}">
+	    <!-- Data Table Css -->
+	    <link rel="stylesheet" type="text/css" href="{% static "bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css" %}">
+	    <link rel="stylesheet" type="text/css" href="{% static "assets/pages/data-table/css/buttons.dataTables.min.css" %}">
+	    <link rel="stylesheet" type="text/css" href="{% static "bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" %}">
+		<!-- Notification.css -->
+	    <link rel="stylesheet" type="text/css" href="{%  static "assets/pages/notification/notification.css" %}">
+		<!-- Select 2 css -->
+	    <link rel="stylesheet" type="text/css" href="{%  static "bower_components/select2/css/select2.min.css" %}">
+	    <!-- Multi Select css -->
+	    <link rel="stylesheet" type="text/css" href="{%  static "bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css" %}">
+	    <link rel="stylesheet" type="text/css" href="{%  static "bower_components/multiselect/css/multi-select.css" %}">
+		<!--forms-wizard css-->
+        <link rel="stylesheet" type="text/css" href="{%  static "bower_components/jquery.steps/css/jquery.steps.css" %}">
+	    <!-- Animate.css -->
+	    <link rel="stylesheet" type="text/css" href="{%  static "bower_components/animate.css/css/animate.css" %}">
+		<!-- animation nifty modal window effects css -->
+        <link rel="stylesheet" type="text/css" href="{%  static "assets/css/component.css" %}">
+		<!-- jquery file upload Frame work -->
+        <link rel="stylesheet" type="text/css" href="{%  static "assets/pages/jquery.filer/css/jquery.filer.css" %}">
+        <link rel="stylesheet" type="text/css" href="{%  static "assets/pages/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" %}">
+		<!-- Style.css -->
+		<link rel="stylesheet" type="text/css" href="{% static "assets/css/style.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/css/pages.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/css/widget.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/css/jquery.dataTables.min.css" %}">
+		{% block css %}
+		
+		{% endblock %}
+	</head>
+
+	<body>
+		<!-- [ Pre-loader ] start -->
+		<div class="loader-bg">
+			<div class="loader-bar"></div>
+		</div>
+		<!-- [ Pre-loader ] end -->
+
+
+		<div id="pcoded" class="pcoded">
+			<div class="pcoded-overlay-box"></div>
+			<div class="pcoded-container navbar-wrapper">
+
+
+				<!-- [ Header ] start -->
+				<nav class="navbar header-navbar pcoded-header">
+					<div class="navbar-wrapper">
+						<div class="navbar-logo">
+							<a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#">
+								<i class="feather icon-toggle-right"></i>
+							</a>
+							<a href="/">
+								<img class="img-fluid" style="width:50px;" src="{% static "assets/images/logo.png" %}" alt="Theme-Logo" />
+							</a>
+							<a class="mobile-options waves-effect waves-light">
+								<i class="feather icon-more-horizontal"></i>
+							</a>
+						</div>
+						<div class="navbar-container container-fluid">
+							<ul class="nav-left">
+								<li class="header-search">
+									<div class="main-search morphsearch-search">
+										<div class="input-group">
+											<span class="input-group-prepend search-close">
+												<i class="feather icon-x input-group-text"></i>
+											</span>
+											<input type="text" class="form-control" placeholder="Buscar">
+											<span class="input-group-append search-btn">
+												<i class="feather icon-search input-group-text"></i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#" onclick="toggleFullScreen()" class="waves-effect waves-light">
+										<i class="full-screen feather icon-maximize"></i>
+									</a>
+								</li>
+							</ul>
+							<ul class="nav-right">
+								<li class="user-profile header-notification">
+									<div class="dropdown-primary dropdown">
+										<div class="dropdown-toggle" data-toggle="dropdown">
+											<img src="{{ image_profile }}" class="img-radius" alt="User-Profile-Image">
+											<span>{{user.first_name}} {{user.last_name}}</span>
+											<i class="feather icon-chevron-down"></i>
+										</div>
+										<ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+											<li>
+												<a href="/lock/">
+													<i class="feather icon-lock"></i> Bloquear
+												</a>
+											</li>
+											<li>
+												<a href="/logout/">
+													<i class="feather icon-log-out"></i> Salir
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<!-- [ Header ] end -->
+
+
+				<div class="pcoded-main-container">
+					<div class="pcoded-wrapper">
+
+
+						<!-- [ navigation menu ] start -->
+						<nav class="pcoded-navbar">
+							<div class="pcoded-inner-navbar main-menu">
+								<div class="">
+									<div class="main-menu-header">
+										<img class="img-menu-user img-radius" src="{{ image_profile }}" alt="User-Profile-Image">
+										<div class="user-details">
+											<p id="more-details">{{user.first_name}} {{user.last_name}}<i class="feather icon-chevron-down m-l-10"></i></p>
+										</div>
+									</div>
+									<div class="main-menu-content">
+										<ul>
+											<li class="more-details">
+												<a href="/lock/">
+												<i class="icofont icofont-lock"></i>Bloquear
+											</a>
+											</li>
+											<li class="more-details">
+												<a href="/logout/">
+												<i class="feather icon-log-out"></i>Salir
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<ul class="pcoded-item pcoded-left-item" id="menu">
+								</ul>
+							</div>
+						</nav>
+						<!-- [ navigation menu ] end -->
+
+
+						<div class="pcoded-content">
+
+
+							<!-- [ breadcrumb ] start -->
+							<div class="page-header">
+								<div class="page-block">
+									<div class="row align-items-center">
+										<div class="col-md-8">
+											<div class="page-header-title">
+												<h4 class="m-b-10" id="title_menu"></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- [ breadcrumb ] end -->
+
+
+							<div class="pcoded-inner-content">
+								<div class="main-body">
+									<div class="page-wrapper">
+										<div class="page-body">
+											<!-- [ page content ] start -->
+											<div class="row" id="row">
+											</div>
+											<!-- [ page content ] end -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- [ JavaScript ] start -->
+		<!-- Required Jquery -->
+		<script type="text/javascript" src="{% static "bower_components/jquery/js/jquery.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/jquery-ui/js/jquery-ui.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/popper.js/js/popper.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/bootstrap/js/bootstrap.min.js" %}"></script>
+		<!-- waves js -->
+		<script type="text/javascript" src="{% static "assets/pages/waves/js/waves.min.js" %}"></script>
+		<!-- jquery slimscroll js -->
+		<script type="text/javascript" src="{% static "bower_components/jquery-slimscroll/js/jquery.slimscroll.js" %}"></script>
+		<!-- modernizr js -->
+		<script type="text/javascript" src="{% static "bower_components/modernizr/js/modernizr.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/modernizr/js/css-scrollbars.js" %}"></script>
+		<!-- Bootstrap date-time-picker js -->
+		<script type="text/javascript" src="{% static "assets/pages/advance-elements/moment-with-locales.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/bootstrap-datepicker/js/bootstrap-datepicker.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/advance-elements/bootstrap-datetimepicker.min.js" %}"></script>
+		<!-- Date-dropper js -->
+		<script type="text/javascript" src="{% static "bower_components/datedropper/js/datedropper.min.js" %}"></script>
+		<!-- Mini-color js -->
+		<script type="text/javascript" src="{% static "bower_components/jquery-minicolors/js/jquery.minicolors.min.js" %}"></script>
+		<!-- data-table js -->
+		<script type="text/javascript" src="{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/datatables.net-buttons/js/dataTables.buttons.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/data-table/js/jszip.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/data-table/js/pdfmake.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/data-table/js/vfs_fonts.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/datatables.net-buttons/js/buttons.print.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/datatables.net-buttons/js/buttons.html5.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/datatables.net-responsive/js/dataTables.responsive.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" %}"></script>
+		<!-- notification js -->
+		<script type="text/javascript" src="{%  static "assets/js/bootstrap-growl.min.js" %}"></script>
+		<script type="text/javascript" src="{%  static "assets/pages/notification/notification.js" %}"></script>
+		<!-- sweet alert js -->
+		<script type="text/javascript" src="{% static "bower_components/sweetalert/js/sweetalert.min.js" %}"></script>
+		<!-- <script type="text/javascript" src="{% static "assets/js/modal.js" %}"></script> -->
+		<!-- Float Chart js -->
+		<script type="text/javascript" src="{% static "assets/pages/chart/float/jquery.flot.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/chart/float/jquery.flot.categories.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/chart/float/curvedLines.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/chart/float/jquery.flot.tooltip.min.js" %}"></script>
+		<!-- amchart js -->
+		<script type="text/javascript" src="{% static "assets/pages/widget/amchart/amcharts.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/widget/amchart/serial.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/widget/amchart/light.js" %}"></script>
+		<!-- modalEffects js nifty modal window effects -->
+		<script type="text/javascript" src="{% static "assets/js/modalEffects.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/js/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+		<!-- Select 2 js -->
+		<script type="text/javascript" src="{% static "bower_components/select2/js/select2.full.min.js" %}"></script>
+		<!-- Multiselect js -->
+		<script type="text/javascript" src="{% static "bower_components/bootstrap-multiselect/js/bootstrap-multiselect.js" %}"></script>
+		<script type="text/javascript" src="{% static "bower_components/multiselect/js/jquery.multi-select.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/js/jquery.quicksearch.js" %}"></script>
+		<!--Forms - Wizard js-->
+	    <script type="text/javascript" src="{% static "bower_components/jquery.cookie/js/jquery.cookie.js" %}"></script>
+	    <script type="text/javascript" src="{% static "bower_components/jquery.steps/js/jquery.steps.js" %}"></script>
+	    <script type="text/javascript" src="{% static "bower_components/jquery-validation/js/jquery.validate.js" %}"></script>
+	    <!-- Validation js -->
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+	    <script type="text/javascript" src="{% static "assets/pages/form-validation/validate.js" %}"></script>
+		<!-- jquery file upload js -->
+        <script type="text/javascript" src="{% static "assets/pages/jquery.filer/js/jquery.filer.min.js" %}"></script>
+		<!-- Custom js -->
+		<script type="text/javascript" src="{% static "assets/js/script.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/js/pcoded.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/js/vertical/vertical-layout.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "assets/pages/dashboard/custom-dashboard.min.js" %}"></script>
+		<script>
+			var token = '{{csrf_token}}';
+			function menu(obj){
+			    var x = document.getElementsByClassName("ScriptGadget");
+		        for (var i = 0; i < x.length; i++) {
+		            x[i].remove();
+		        }
+
+		        var x = document.getElementsByClassName("CssGadget");
+		        for (var i = 0; i < x.length; i++) {
+		            x[i].remove();
+		        }
+
+		        $('#menu li').removeClass( "active" );
+		        $(obj).addClass('active');
+		        $('#title_menu').html($(obj).attr('data-name'));
+		        $('.page-body').html('<div class="row" id="row"></div>');
+
+			    $.post('../../LoadProfile/', {
+				    target: 'menu',
+				    menu: $(obj).attr('data'),
+					csrfmiddlewaretoken: token
+				}, function(data){
+				    data.gadgets.forEach(function(gadget){
+
+			            $('#row').append(gadget.html);
+
+			            var c = document.createElement("style");
+			            c.type = "text/css";
+			            c.className = 'CssGadget';
+			            c.innerHTML = gadget.css;
+			            $("head").append(c);
+
+			            var s = document.createElement("script");
+			            s.type = "text/javascript";
+			            s.className = 'ScriptGadget';
+			            s.innerHTML = gadget.js;
+			            $("body").append(s);
+
+			        });
+				});
+		    }
+
+			$(document).ready(function(){
+				$.post('../../LoadProfile/', {
+				    target: 'initialize',
+					csrfmiddlewaretoken: token
+				}, function(data){
+				    var menu = data.menu;
+
+				    for(var i=0; i < menu.length; i++){
+			            var active = (i == 0) ? 'active':'';
+			            $('#menu').append('' +
+			                '<li class="'+active+'" data="'+menu[i].id+'" data-name="'+menu[i].name+'" onclick="javascript:menu($(this));"><a class="waves-effect waves-dark"><span class="pcoded-micon"><i class="'+menu[i].icon+'"></i></span><span class="pcoded-mtext">'+menu[i].name+'</span></a></li>');
+			        }
+
+			        $('#title_menu').html(menu[0].name);
+
+				    data.gadgets.forEach(function(gadget){
+
+			            $('#row').append(gadget.html);
+
+			            var c = document.createElement("style");
+			            c.type = "text/css";
+			            c.className = 'CssGadget';
+			            c.innerHTML = gadget.css;
+			            $("head").append(c);
+
+			            var s = document.createElement("script");
+			            s.type = "text/javascript";
+			            s.className = 'ScriptGadget';
+			            s.innerHTML = gadget.js;
+			            $("body").append(s);
+
+			        });
+				});
+			});
+		</script>
+	</body>
+</html>
+
+

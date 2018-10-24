@@ -1,0 +1,83 @@
+<div class="md-modal md-effect-12" id="{prefix}_modal">
+    <div class="md-content">
+        <div class="row simple-cards users-card">
+            <div class="col-md-12 col-xl-12">
+                <div class="card user-card">
+                    <div class="card-header-img">
+	                    <div class="row">
+		                    <div class="col-md-3"></div>
+		                    <form id="{prefix}_new_candidate_form" class="col-md-6 form-material">
+			                    <img id="" style="width: 150px;" class="img-fluid" src="/static/assets/images/new-candidate.png" alt="card-img">
+		                        <div class="form-group form-success">
+	                                <input type="text" name="name" id="name" class="form-control" required="">
+	                                <span class="form-bar"></span>
+	                                <label class="float-label">Nombre</label>
+	                            </div>
+			                    <div class="form-group form-success">
+				                    <input type="file" name="image" id="image">
+			                    </div>
+			                    <div class="form-group form-success">
+				                    <select name="politic_party" id="politic_party" class="form-control form-control-default">
+					                    <option value="-1">Partido o Coalición</option>
+				                    </select>
+			                    </div>
+			                    <div class="form-group form-success">
+				                    <select name="entity" id="entity" class="form-control form-control-default">
+					                    <option value="-1">Entidad Federativa</option>
+				                    </select>
+			                    </div>
+			                    <div class="form-group form-success">
+				                    <select name="category2" id="category" class="form-control form-control-default">
+					                    <option value="-1">Tipo Eleccion</option>
+				                    </select>
+			                    </div>
+	                            <div class="form-group form-success">
+				                    <select name="appointment" id="appointment" class="form-control form-control-default">
+					                    <option value="-1">Cargo Politico</option>
+				                    </select>
+			                    </div>
+		                    </form>
+	                    </div>
+                    </div>
+                    <div>
+                        <button type="button" id="{prefix}_new_candidate_cancel" class="btn btn-danger waves-effect waves-light m-r-15">Cancelar</button>
+                        <button type="button" id="{prefix}_new_candidate_add" style="margin-left: 100px;" class="btn btn-success waves-effect waves-light">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="md-modal md-effect-11" id="{prefix}_modify_process_modal">
+    <div class="md-content">
+        <div class="row simple-cards users-card">
+            <div class="col-md-12 col-xl-12">
+	            <br><br><br>
+                <div class="card user-card">
+                    <div class="card-header-img">
+	                    <div class="row">
+		                    <div class="col-md-3"></div>
+		                    <form id="{prefix}_modify_process_form" class="col-md-6 form-material">
+		                        <div class="form-group form-success">
+	                                <input type="text" name="name" id="name" class="form-control" required="">
+	                                <span class="form-bar"></span>
+	                                <label class="float-label">Nombre</label>
+	                            </div>
+			                    <div class="form-group form-success">
+				                    <input type="text" name="date" id="date" class="form-control" data-format="j F Y" data-lang="es" data-large-mode="true" required="">
+	                                <span class="form-bar"></span>
+	                                <label class="float-label">Fecha</label>
+			                    </div>
+		                    </form>
+	                    </div>
+                    </div>
+                    <div>
+                        <button type="button" id="{prefix}_modify_process_cancel" class="btn btn-danger waves-effect waves-light m-r-15">Cancelar</button>
+                        <button type="button" id="{prefix}_modify_process" style="margin-left: 100px;" class="btn btn-primary waves-effect waves-light">Modificar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
